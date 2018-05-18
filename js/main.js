@@ -1,5 +1,6 @@
 //declare constants for textarea, button, and input
 addPostInput = document.querySelector('input.addPostInput');
+// addInput needed to be addPostInput to match class name of textarea tag
 var addTextArea = document.querySelector('textarea.addPostInput');
 var addPostButton = document.querySelector('button.addPostButton');
 
@@ -23,7 +24,8 @@ addPostButton.addEventListener('click', function() {
     buttonDiv.className = 'buttonDiv'
 
     //create buttons for div
-    var up = document.createelement('buton');
+    // needed to camelCase createElement
+    var up = document.createElement('buton');
     up.className = 'up';
     up.textContent = 'Up';
 
@@ -56,7 +58,8 @@ addPostButton.addEventListener('click', function() {
     addTextArea.value = '';
 
     //create event listener for up, down, remove buttons
-    remove.addeventlistener('click', function(event) {
+    // camelCase addEventListener
+    remove.addEventListener('click', function(event) {
         if (event.target.tagName == 'BUTTON') {
             if (event.target.className == 'remove') {
                 body.removeChild(postBody);
